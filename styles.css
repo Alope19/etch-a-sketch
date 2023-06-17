@@ -1,0 +1,48 @@
+body{
+    background-color: rgb(224, 224, 224);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+h1{
+    text-align: center;
+}
+.container{
+    border: solid;
+    color: white;
+    background-color: white;
+    width: 500px;
+    height: 500px;
+}
+.options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+    gap: 50px;
+}
+.slidervalue{
+    text-align: center;
+}
+button{
+    background-color: rgb(224, 224, 224);
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: larger;
+    border-radius: 5px;
+    
+}
+.colorcontainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.color{
+    border-radius: 50%;
+    height: 75px;
+    width: 75px;
+    overflow: hidden;
+}

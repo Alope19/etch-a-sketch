@@ -20,7 +20,7 @@ h1{
     justify-content: center;
     align-items: center;
     margin: 50px;
-    gap: 50px;
+    gap: 20px;
 }
 .slidervalue{
     text-align: center;
@@ -34,11 +34,14 @@ h1{
 }
 button{
     background-color: rgb(224, 224, 224);
-    padding: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-    font-size: larger;
+    width: 100px;
+    height: 40px;
     border-radius: 5px;
+    font-size: larger;
+    margin: 20px;
+}
+button:hover{
+    background-color:rgb(214, 214, 214);
 }
 .color{
     visibility: hidden;

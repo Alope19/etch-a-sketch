@@ -48,5 +48,5 @@ button{
     height: 75px;
     background-color: black;
     border-radius: 50%;
-    box-shadow: 5px 5px 20px gray
+    box-shadow: 5px 5px 20px rgb(128, 128, 128)
 }

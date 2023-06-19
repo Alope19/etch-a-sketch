@@ -27,7 +27,7 @@ h1{
     text-align: center;
 }
 .slider{
-    -webkit-appearance: none;
+    appearance: none;
     border-radius: 20px;
     width: 150px;
     height: 10px;

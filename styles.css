@@ -8,12 +8,14 @@ body{
 h1{
     text-align: center;
 }
-.container{
+.sketchpad{
     border: solid;
     color: white;
     background-color: white;
-    width: 500px;
-    height: 500px;
+    width: 600px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
 }
 .options{
     display: flex;
@@ -22,7 +24,7 @@ h1{
     margin: 50px;
     gap: 20px;
 }
-.slidervalue{
+.slidertext{
     text-align: center;
 }
 .slider{
@@ -52,4 +54,11 @@ button:hover{
     background-color: black;
     border-radius: 50%;
     box-shadow: 5px 5px 20px rgb(128, 128, 128)
+}
+.pixel{
+    flex: 1;
+}
+.pixelcontainer{
+    flex: 1;
+    display: flex;
 }

@@ -4,6 +4,8 @@ const color = document.querySelector('.color')
 const slider = document.querySelector('.slider')
 const sliderText = document.querySelector('.slidertext')
 const sketchpad = document.querySelector('.sketchpad')
+const clear = document.querySelector('.clear')
+startSketch()
 
 
 // Changes color of input=color and makes its so user can interact with it
@@ -39,4 +41,24 @@ slider.addEventListener('change',()=>{
 
         }
     }
+    startSketch()
+})
+
+// function that makes it so user can draw on screen
+function startSketch(){
+    const pixels = document.querySelectorAll('.pixel')
+    pixels.forEach((pixel)=>{
+        pixel.addEventListener('mouseover',()=>{
+            console.log(pixel)
+            console.log(color.value)
+            pixel.style.backgroundColor = color.value
+        })
+    })
+}
+// clears sketchpad when clear button is clicked
+clear.addEventListener('click',()=>{
+    const pixels = document.querySelectorAll('.pixel')
+    pixels.forEach((pixel)=>{
+        pixel.style.backgroundColor = "#ffffff"
+    })
 })

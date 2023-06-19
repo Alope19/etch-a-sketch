@@ -9,11 +9,10 @@ h1{
     text-align: center;
 }
 .sketchpad{
-    border: solid;
     color: white;
     background-color: white;
-    width: 600px;
-    height: 600px;
+    width: 500px;
+    height: 500px;
     display: flex;
     flex-direction: column;
 }

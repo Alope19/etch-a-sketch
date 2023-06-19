@@ -5,6 +5,8 @@ const slider = document.querySelector('.slider')
 const sliderText = document.querySelector('.slidertext')
 const sketchpad = document.querySelector('.sketchpad')
 const clear = document.querySelector('.clear')
+const eraser = document.querySelector('.eraser')
+let eraserOn = false
 startSketch()
 
 
@@ -47,13 +49,20 @@ slider.addEventListener('change',()=>{
 // function that makes it so user can draw on screen
 function startSketch(){
     const pixels = document.querySelectorAll('.pixel')
-    pixels.forEach((pixel)=>{
-        pixel.addEventListener('mouseover',()=>{
-            console.log(pixel)
-            console.log(color.value)
-            pixel.style.backgroundColor = color.value
+    if(eraserOn === false){
+        pixels.forEach((pixel)=>{
+            pixel.addEventListener('mouseover',()=>{
+                pixel.style.backgroundColor = color.value
+            })
         })
-    })
+    }
+    else{
+        pixels.forEach((pixel)=>{
+            pixel.addEventListener('mouseover',()=>{
+                pixel.style.backgroundColor = '#ffffff'
+            })
+        })
+    }
 }
 // clears sketchpad when clear button is clicked
 clear.addEventListener('click',()=>{
@@ -61,4 +70,18 @@ clear.addEventListener('click',()=>{
     pixels.forEach((pixel)=>{
         pixel.style.backgroundColor = "#ffffff"
     })
+})
+//Checks if button is clicked if so turns eraser on and off accordingly
+eraser.addEventListener('click',()=>{
+    if(eraserOn === false){
+        eraser.style.backgroundColor = "#909090"
+        eraserOn = true
+        startSketch()
+    }
+    else{
+        eraser.style.backgroundColor = "#e0e0e0"
+        eraser.classList.add('.eraser')
+        eraserOn = false
+        startSketch()
+    }
 })

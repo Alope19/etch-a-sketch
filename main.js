@@ -45,7 +45,6 @@ slider.addEventListener('change',()=>{
     }
     startSketch()
 })
-
 // function that makes it so user can draw on screen
 function startSketch(){
     const pixels = document.querySelectorAll('.pixel')
